@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Crear una nueva tarea</h1>
+
+<form method="post">
+
+    {% csrf_token %} {# token de seguridad requerido por django #}
+
+    {{ form }}
+    <button>
+        guardar
+    </button>
+</form>
+
+{% endblock %}

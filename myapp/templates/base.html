@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Project</title>
+
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="{% url 'index' %}">home</a></li>
+            <li><a href="{% url 'about' %}">about</a></li>
+            <li><a href="{% url 'projects' %}">projects</a></li>
+            <li><a href="{% url 'tasks' %}">tasks</a></li>
+            <li><a href="{% url 'create_task' %}">new task</a></li>
+            <li><a href="{% url 'create_project' %}">new project</a></li>
+        </ul>
+    </nav>
+    
+    {# las dos lineas siguientes hacen que luego de renderizar la navbar muestre el contenido de la pagina original. De lo contrario renderiza loso la navbar #}
+    
+
+    <main class="container">
+
+        {% block content %}
+        {% endblock %}
+
+    </main>    
+    
+</body>
+</html>

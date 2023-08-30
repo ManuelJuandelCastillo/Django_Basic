@@ -1,0 +1,27 @@
+
+<!-- importar archivo que contiene la barra de navegacion -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Tareas</h1>
+
+{% for task in tasks %}
+
+<article>
+    <h2>{% if task.done == True %} ✅ {% else %}⏰  {% endif %} {{ task.title }}</h2>
+
+    <p>{{ task.description }}</p>
+    <p>Project: {{ task.project.name }}</p>
+
+    <button>
+        🗑️
+    </button>
+    <button>
+        ✅
+    </button>
+</article>
+
+{% endfor %}
+
+{% endblock %}

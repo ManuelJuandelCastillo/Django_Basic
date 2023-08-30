@@ -1,0 +1,32 @@
+body {
+    background: #112029;
+    color: whitesmoke;
+}
+
+.navbar {
+    background: #202020;
+    padding: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navbar ul li a:hover {
+    color: aquamarine;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
